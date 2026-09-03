@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"os"
+
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
+)
 
 func main() {
-	fmt.Println("Hello, World")
+	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
+	log.Info().Msg("the coffee's on, the compiler's warm, hello from this side of the glass")
 }

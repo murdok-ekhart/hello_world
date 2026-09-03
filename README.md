@@ -1,6 +1,6 @@
 # hello_world
 
-A tiny Go Hello World used as a POC for Murdok.
+A tiny Go program that logs a hello with [zerolog](https://github.com/rs/zerolog).
 
 ## Clone
 
@@ -9,17 +9,11 @@ git clone https://github.com/murdok-ekhart/hello_world.git
 cd hello_world
 ```
 
-To work on the Hello World code, check out the `development` branch:
-
-```shell
-git checkout development
-```
-
 ## Install
 
-Requires [Go](https://go.dev/dl/) 1.22+.
+Needs [Go](https://go.dev/dl/) 1.23 or newer (that's zerolog's current floor).
 
-From the repo root (on `development`):
+From the repo root:
 
 ```shell
 go install .
@@ -53,8 +47,8 @@ Or with the built binary:
 ./hello_world
 ```
 
-Expected output:
+It writes an info line to stderr via zerolog's console writer, for example:
 
 ```text
-Hello, World
+10:49PM INF the coffee's on, the compiler's warm, hello from this side of the glass
 ```
